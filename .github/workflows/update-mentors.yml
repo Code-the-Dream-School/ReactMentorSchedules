@@ -1,0 +1,45 @@
+name: Update mentors from Airtable
+
+on:
+  schedule:
+    # Runs at the top of every hour, UTC. GitHub Actions cron is always
+    # UTC — there is no timezone field — so if you want this to line up
+    # with a specific local hour, convert first (e.g. 9am US/Eastern is
+    # 13:00 or 14:00 UTC depending on daylight saving).
+    - cron: '30 * * * *'
+  workflow_dispatch: {}   # lets you trigger a refresh manually from the Actions tab
+
+permissions:
+  contents: write   # needed so the workflow can commit mentors.json back to the repo
+
+jobs:
+  update-mentors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch mentors from Airtable
+        env:
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+          AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+          AIRTABLE_TABLE_NAME: ${{ secrets.AIRTABLE_TABLE_NAME }}
+          AIRTABLE_VIEW_NAME: ${{ secrets.AIRTABLE_VIEW_NAME }}
+        run: node scripts/fetch-mentors.mjs
+
+      - name: Commit updated mentors.json (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add mentors.json
+          if git diff --cached --quiet; then
+            echo "No changes to mentors.json — skipping commit."
+          else
+            git commit -m "Update mentors.json from Airtable [automated]"
+            git push
+          fi

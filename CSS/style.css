@@ -1,0 +1,203 @@
+ :root {
+    --ink: #1B2A41;
+    --ink-soft: #5B6B7C;
+    --cream: #FAF9F5;
+    --panel: #FFFFFF;
+    --line: #E4E1D8;
+    --gold: #B8922F;
+    --gold-soft: #F1E6C8;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h3 a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .app {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background: var(--ink);
+    color: #E8ECF1;
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    margin: 0 0 4px;
+    color: #fff;
+  }
+
+  .sidebar .sub {
+    font-size: 0.8rem;
+    color: #9AA9BC;
+    margin: 0 0 28px;
+  }
+
+  .mentor-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+  }
+
+  .mentor-item button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    color: #C7D0DC;
+    font-family: inherit;
+    font-size: 0.95rem;
+    text-align: left;
+    padding: 10px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .mentor-item button:hover {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+  }
+
+  .mentor-item.active button {
+    background: rgba(184, 146, 47, 0.18);
+    color: #fff;
+  }
+
+  .avatar {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(184, 146, 47, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 0.85rem;
+    color: var(--gold-soft);
+  }
+
+  .mentor-item.active .avatar {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+
+  .mentor-name {
+    font-weight: 500;
+  }
+
+  .sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    font-size: 0.72rem;
+    color: #6C7B8E;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* ---------- Main panel ---------- */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .main-header {
+    padding: 28px 40px 20px;
+    border-bottom: 1px solid var(--line);
+    background: var(--panel);
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin: 0 0 6px;
+  }
+
+  .main-header h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+  }
+
+  .main-header p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+  }
+
+  .embed-wrap {
+    flex: 1;
+    padding: 24px 40px 40px;
+  }
+
+  .calendly-inline-widget {
+    min-width: 320px;
+    height: 100%;
+    min-height: 700px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--panel);
+  }
+
+  .empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 400px;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 720px) {
+    .app { flex-direction: column; }
+    .sidebar {
+      width: 100%;
+      padding: 20px;
+    }
+    .mentor-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      overflow-y: visible;
+    }
+    .mentor-item button { padding: 8px 10px; }
+    .main-header, .embed-wrap { padding-left: 20px; padding-right: 20px; }
+  }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Time with a Mentor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" type="text/css" href="CSS/style.css"></style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <h2>React Course</h2>
+
+    <h3><a id="groupSessionLink" href="#" target="_blank" rel="noopener">Group Session<br>Schedule Here</a></h3>
+
+    <h2>Book Time with<br>a 1:1 Mentor</h2>
+    <p class="sub">Click on a mentor to see their availability.</p>
+
+    <ul class="mentor-list" id="mentorList"></ul>
+
+    <div class="sidebar-footer">
+      Powered by Calendly. Availability shown reflects the current month.
+    </div>
+  </aside>
+
+  <!-- ============ MAIN PANEL ============ -->
+  <main class="main">
+    <div class="main-header" id="mainHeader">
+      <p class="eyebrow">Mentor Schedule for: </p>
+      <h2 id="mentorName">Select a mentor</h2>
+      <p id="mentorTagline">Choose a name on the left to load their scheduling page.</p>
+    </div>
+
+    <div class="embed-wrap" id="embedWrap">
+      <div class="empty-state">No mentor selected yet.</div>
+    </div>
+  </main>
+
+</div>
+
+<script src="https://assets.calendly.com/assets/external/widget.js"></script>
+<script src="JS/index.js"></script>
+
+</body>
+</html>
