@@ -23,7 +23,7 @@ const params = new URLSearchParams({ pageSize: "100" });
 if (AIRTABLE_VIEW_NAME) {
   params.set("view", AIRTABLE_VIEW_NAME);
 } else {
-  params.set("sort[0][field]", "Display Name");
+  params.set("sort[0][field]", "Formatted Name");
   params.set("sort[0][direction]", "asc");
 }
 
@@ -31,7 +31,7 @@ if (AIRTABLE_VIEW_NAME) {
 // pulling every column on every record. Airtable requires each one
 // added as a separate fields[] entry (not a single comma-separated
 // value), hence the loop.
-["Display Name", "calendly slug", "Group Session Calendar Link"].forEach((f) =>
+["Formatted Name", "calendly slug", "Group Session Calendar Link"].forEach((f) =>
   params.append("fields[]", f)
 );
 
@@ -56,7 +56,7 @@ async function main() {
   // so every record returned here is treated as usable.
   const mentors = (data.records || [])
     .map((r) => ({
-      name: r.fields["Display Name"] || "",
+      name: r.fields["Formatted Name"] || "",
       slug: r.fields["calendly slug"] || "",
     }))
     .filter((m) => m.name && m.slug);
