@@ -21,6 +21,10 @@
       "slug": "frampton-ctd"
     },
     {
+      "name": "Eduardo V",
+      "slug": "eduardo-ctd"
+    },
+    {
       "name": "George K",
       "slug": "george-ctd"
     },
@@ -48,5 +52,5 @@
   "groupSessionLink": [
     "https://codethedream.slack.com/docs/T07EHJ738/F0BCD8ESP43?focus_section_id=temp:C:RMI0184a48e9fb047cc80cf267a7"
   ],
-  "generatedAt": "2026-09-15T13:48:44.112Z"
+  "generatedAt": "2026-09-15T18:25:19.575Z"
 }
