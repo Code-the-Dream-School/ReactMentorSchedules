@@ -1,56 +1,5 @@
 {
-  "mentors": [
-    {
-      "name": "Adam A",
-      "slug": "adamjabundis"
-    },
-    {
-      "name": "Adithya M",
-      "slug": "adithyamelayikandy"
-    },
-    {
-      "name": "Afreen S",
-      "slug": "afreen-ctd"
-    },
-    {
-      "name": "Ashley C",
-      "slug": "ashley-ctd"
-    },
-    {
-      "name": "Daniel F",
-      "slug": "frampton-ctd"
-    },
-    {
-      "name": "Eduardo V",
-      "slug": "eduardo-ctd"
-    },
-    {
-      "name": "George K",
-      "slug": "george-ctd"
-    },
-    {
-      "name": "Hana A",
-      "slug": "hanaadenabdi"
-    },
-    {
-      "name": "Heorhii S",
-      "slug": "g-siburov"
-    },
-    {
-      "name": "Jayasoorya J",
-      "slug": "jayasoorya-ctd"
-    },
-    {
-      "name": "Joannes F",
-      "slug": "joannes-ctd"
-    },
-    {
-      "name": "Stephen R",
-      "slug": "lewis-ctd"
-    }
-  ],
-  "groupSessionLink": [
-    "https://codethedream.slack.com/docs/T07EHJ738/F0BCD8ESP43?focus_section_id=temp:C:RMI0184a48e9fb047cc80cf267a7"
-  ],
-  "generatedAt": "2026-09-15T21:41:07.278Z"
+  "mentors": [],
+  "groupSessionLink": "",
+  "generatedAt": "2026-09-16T00:43:38.652Z"
 }
