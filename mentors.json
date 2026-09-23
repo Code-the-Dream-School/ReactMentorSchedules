@@ -1,5 +1,20 @@
 {
-  "mentors": [],
-  "groupSessionLink": "",
-  "generatedAt": "2026-09-22T22:22:53.602Z"
+  "mentors": [
+    {
+      "name": "George K",
+      "slug": "george-ctd"
+    },
+    {
+      "name": "Jayasoorya J",
+      "slug": "jayasoorya-ctd"
+    },
+    {
+      "name": "Stephen R",
+      "slug": "lewis-ctd"
+    }
+  ],
+  "groupSessionLink": [
+    "https://codethedream.slack.com/docs/T07EHJ738/F0C2FUR5U7N?focus_section_id=temp:C:REZ0012c73e329e44f18032c0510"
+  ],
+  "generatedAt": "2026-09-23T00:52:12.931Z"
 }
