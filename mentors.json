@@ -1,7 +1,28 @@
 {
-  "mentors": [],
+  "mentors": [
+    {
+      "name": "Eduardo V",
+      "schedulingUrl": "https://calendly.com/eduardo-ctd/coffee-chat"
+    },
+    {
+      "name": "George K",
+      "schedulingUrl": "https://calendly.com/george-ctd/30min"
+    },
+    {
+      "name": "Hana A",
+      "schedulingUrl": "https://calendly.com/hanaadenabdi/1-1-mentoring"
+    },
+    {
+      "name": "Jayasoorya J",
+      "schedulingUrl": "https://calendly.com/jayasoorya-ctd/1-1-mentor-session"
+    },
+    {
+      "name": "Stephen R",
+      "schedulingUrl": "https://calendly.com/lewis-ctd/mentoring"
+    }
+  ],
   "groupSessionLink": [
     "https://codethedream.slack.com/docs/T07EHJ738/F0C2FUR5U7N?focus_section_id=temp:C:REZ0012c73e329e44f18032c0510"
   ],
-  "generatedAt": "2026-10-01T16:38:28.355Z"
+  "generatedAt": "2026-10-01T16:40:16.883Z"
 }
