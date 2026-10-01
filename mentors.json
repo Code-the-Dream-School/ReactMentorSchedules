@@ -1,32 +1,7 @@
 {
-  "mentors": [
-    {
-      "name": "Eduardo V",
-      "slug": "eduardo-ctd"
-    },
-    {
-      "name": "George K",
-      "slug": "george-ctd"
-    },
-    {
-      "name": "Hana A",
-      "slug": "hanaadenabdi"
-    },
-    {
-      "name": "Jayasoorya J",
-      "slug": "jayasoorya-ctd"
-    },
-    {
-      "name": "Sonali B",
-      "slug": "app"
-    },
-    {
-      "name": "Stephen R",
-      "slug": "lewis-ctd"
-    }
-  ],
+  "mentors": [],
   "groupSessionLink": [
     "https://codethedream.slack.com/docs/T07EHJ738/F0C2FUR5U7N?focus_section_id=temp:C:REZ0012c73e329e44f18032c0510"
   ],
-  "generatedAt": "2026-10-01T13:48:03.099Z"
+  "generatedAt": "2026-10-01T16:36:48.486Z"
 }
