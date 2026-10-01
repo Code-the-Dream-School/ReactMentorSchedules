@@ -31,7 +31,7 @@ if (AIRTABLE_VIEW_NAME) {
 // pulling every column on every record. Airtable requires each one
 // added as a separate fields[] entry (not a single comma-separated
 // value), hence the loop.
-["Formatted Name", "calendly slug", "Group Session Calendar Link"].forEach((f) =>
+["Formatted Name", "Calendar Link", "Group Session Calendar Link"].forEach((f) =>
   params.append("fields[]", f)
 );
 
@@ -57,9 +57,9 @@ async function main() {
   const mentors = (data.records || [])
     .map((r) => ({
       name: r.fields["Formatted Name"] || "",
-      slug: r.fields["calendly slug"] || "",
+      schedulingUrl: r.fields["Calendar Link"] || "",
     }))
-    .filter((m) => m.name && m.slug);
+    .filter((m) => m.name && m.schedulingUrl);
 
   // Group Session Calendar Link is the same value repeated on every
   // row, so just take it from the first record that has it set.
