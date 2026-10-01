@@ -18,7 +18,7 @@ if (!AIRTABLE_TOKEN || !AIRTABLE_BASE_ID) {
 // If a view is set, that view's own sort order (configured in Airtable's
 // UI) is used, so no sort param is sent here at all — the view is the
 // single source of truth for ordering. If no view is set, fall back to
-// sorting by Display Name.
+// sorting by Formatted Name.
 const params = new URLSearchParams({ pageSize: "100" });
 if (AIRTABLE_VIEW_NAME) {
   params.set("view", AIRTABLE_VIEW_NAME);
